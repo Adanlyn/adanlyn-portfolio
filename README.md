@@ -5,7 +5,7 @@ Este repositório contém meu portfólio pessoal, desenvolvido com foco em organ
 O objetivo do projeto é apresentar meus principais trabalhos e demonstrar minha evolução técnica como desenvolvedora Fullstack em formação.
 
 ## 🔗 Acesse
-> Em breve: [adanlyn.github.io/portfolio](https://adanlyn.github.io/portfolio)
+> Link do portfólio: https://adanlyn.github.io/adanlyn-portfolio/
 
 ## 🔎 Sobre o projeto
 
@@ -23,7 +23,7 @@ Também implementei interações com IntersectionObserver para animações basea
 
 ```bash
 # Clone o repositório
-git clone https://github.com/adanlyn/portfolio.git
+git clone https://github.com/adanlyn/adanlyn-portfolio.git
 
 # Abra o index.html no navegador
 # Ou use o Live Server no VS Code

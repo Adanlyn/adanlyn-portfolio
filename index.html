@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,20 +7,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adanlyn Silva — Fullstack Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav>
   <div class="nav-logo">adanlyn.dev</div>
   <ul class="nav-links">
-    <li><a href="#sobre">sobre</a></li>
-    <li><a href="#habilidades">habilidades</a></li>
-    <li><a href="#projetos">projetos</a></li>
-    <li><a href="#experiencia">experiência</a></li>
+    <li><a href="#sobre" data-pt="sobre" data-en="about">sobre</a></li>
+    <li><a href="#habilidades" data-pt="habilidades" data-en="skills">habilidades</a></li>
+    <li><a href="#projetos" data-pt="projetos" data-en="projects">projetos</a></li>
+    <li><a href="#experiencia" data-pt="experiência" data-en="experience">experiência</a></li>
     <li><a href="#ia">IA</a></li>
-    <li><a href="#contato">contato</a></li>
+    <li><a href="#contato" data-pt="contato" data-en="contact">contato</a></li>
   </ul>
+  <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+    <img src="assets/images/flag-br.png" alt="Português" class="lang-flag active" id="langPT">
+    <img src="assets/images/flag-us.png" alt="English" class="lang-flag" id="langEN">
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -27,16 +32,16 @@
   <div class="hero-grid-bg"></div>
   
   <div class="hero-content">
-    <div class="hero-tag">backend .net developer</div>
+    <div class="hero-tag" data-pt="backend .net developer" data-en="backend .net developer">backend .net developer</div>
     <h1>Adanlyn<br><span>Silva.</span></h1>
-    <p class="hero-desc">
+    <p class="hero-desc" data-pt="Desenvolvedora com foco em backend .NET, construindo APIs com ASP.NET Core, autenticação JWT e banco relacional. Venho da área de QA, então além de desenvolver, também me preocupo bastante com qualidade, regras de negócio e funcionamento real do sistema." data-en="Developer focused on .NET backend, building APIs with ASP.NET Core, JWT authentication and relational databases. I come from QA, so beyond coding I deeply care about quality, business rules and how the system actually works.">
       Desenvolvedora com foco em backend .NET, construindo APIs com ASP.NET Core,
       autenticação JWT e banco relacional. Venho da área de QA, então além de desenvolver,
       também me preocupo bastante com qualidade, regras de negócio e funcionamento real do sistema.
     </p>
     <div class="hero-cta">
-      <a href="#contato" class="btn btn-primary">Entrar em contato</a>
-      <a href="#projetos" class="btn btn-ghost">Ver projetos</a>
+      <a href="#contato" class="btn btn-primary" data-pt="Entrar em contato" data-en="Get in touch">Entrar em contato</a>
+      <a href="#projetos" class="btn btn-ghost" data-pt="Ver projetos" data-en="See projects">Ver projetos</a>
     </div>
   </div>
 
@@ -51,11 +56,11 @@
       <div class="terminal-body">
         <div><span class="t-prompt">$ </span><span class="t-cmd">cat developer.json</span></div>
         <div class="t-output">{</div>
-        <div class="t-output">&nbsp;&nbsp;<span class="t-key">"nome"</span>: <span class="t-string">"Adanlyn Silva"</span>,</div>
+        <div class="t-output">&nbsp;&nbsp;<span class="t-key">"name"</span>: <span class="t-string">"Adanlyn Silva"</span>,</div>
         <div class="t-output">&nbsp;&nbsp;<span class="t-key">"stack"</span>: <span class="t-string">".NET · Node.js · React · TypeScript"</span>,</div>
-        <div class="t-output">&nbsp;&nbsp;<span class="t-key">"tipo"</span>: <span class="t-string">"Backend .NET Júnior"</span>,</div>
-        <div class="t-output">&nbsp;&nbsp;<span class="t-key">"pós"</span>: <span class="t-string">"IA & Machine Learning"</span>,</div>
-        <div class="t-output">&nbsp;&nbsp;<span class="t-key">"aberta_para"</span>: <span class="t-val">true</span></div>
+        <div class="t-output">&nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-string">"Backend .NET Junior"</span>,</div>
+        <div class="t-output">&nbsp;&nbsp;<span class="t-key">"postgrad"</span>: <span class="t-string">"AI & Machine Learning"</span>,</div>
+        <div class="t-output">&nbsp;&nbsp;<span class="t-key">"open_to_work"</span>: <span class="t-val">true</span></div>
         <div class="t-output">}</div>
         <div style="margin-top:0.5rem"><span class="t-prompt">$ </span><span class="t-cursor"></span></div>
       </div>
@@ -65,31 +70,37 @@
 
 <!-- SOBRE -->
 <section id="sobre">
-  <div class="section-label">01 — sobre</div>
-  <h2>Quem sou eu</h2>
+  <div class="section-label" data-pt="01 — sobre" data-en="01 — about">01 — sobre</div>
+  <h2 data-pt="Quem sou eu" data-en="About me">Quem sou eu</h2>
   <div class="about-grid reveal">
     <div class="about-text">
-      <p>Sou desenvolvedora <strong>Backend .NET Júnior</strong> e venho construindo minha stack de ponta a ponta, entendendo cada parte do processo. Minha base como <strong>Software Tester</strong> me trouxe um diferencial importante: não penso só em fazer funcionar, mas em garantir que funcione bem, com <strong>qualidade e previsibilidade</strong>  .</p>
-      <p>No backend, tenho experiência com <strong>.NET/C#, Node.js e Python (FastAPI)</strong>, estruturando APIs, regras de negócio e integrações.
-      No frontend, trabalho com <strong>React e TypeScript</strong>, conectando interfaces a APIs reais e organizando o código de forma escalável.</p>
-      <p>Atualmente curso <strong>Pós-graduação em IA e Machine Learning</strong>, e já apliquei IA generativa no TalkClass integrando a API do Gemini para automação de dados.</p>
+      <p data-pt="Sou desenvolvedora <strong>Backend .NET Júnior</strong> e venho construindo minha stack de ponta a ponta, entendendo cada parte do processo. Minha base como <strong>Software Tester</strong> me trouxe um diferencial importante: não penso só em fazer funcionar, mas em garantir que funcione bem, com <strong>qualidade e previsibilidade</strong>." data-en="I'm a <strong>Junior .NET Backend Developer</strong> building my stack end-to-end, understanding every part of the process. My background as a <strong>Software Tester</strong> gives me a real edge: I don't just make things work — I make sure they work well, with <strong>quality and predictability</strong>.">
+        Sou desenvolvedora <strong>Backend .NET Júnior</strong> e venho construindo minha stack de ponta a ponta, entendendo cada parte do processo. Minha base como <strong>Software Tester</strong> me trouxe um diferencial importante: não penso só em fazer funcionar, mas em garantir que funcione bem, com <strong>qualidade e previsibilidade</strong>.
+      </p>
+      <p data-pt="No backend, tenho experiência com <strong>.NET/C#, Node.js e Python (FastAPI)</strong>, estruturando APIs, regras de negócio e integrações. No frontend, trabalho com <strong>React e TypeScript</strong>, conectando interfaces a APIs reais e organizando o código de forma escalável." data-en="On the backend, I work with <strong>.NET/C#, Node.js and Python (FastAPI)</strong>, structuring APIs, business logic and integrations. On the frontend, I use <strong>React and TypeScript</strong>, connecting interfaces to real APIs and organizing scalable code.">
+        No backend, tenho experiência com <strong>.NET/C#, Node.js e Python (FastAPI)</strong>, estruturando APIs, regras de negócio e integrações.
+        No frontend, trabalho com <strong>React e TypeScript</strong>, conectando interfaces a APIs reais e organizando o código de forma escalável.
+      </p>
+      <p data-pt="Atualmente curso <strong>Pós-graduação em IA e Machine Learning</strong>, e já apliquei IA generativa no TalkClass integrando a API do Gemini para automação de dados." data-en="I'm currently pursuing a <strong>Postgraduate degree in AI and Machine Learning</strong>, and I've already applied generative AI in TalkClass by integrating the Gemini API for data automation.">
+        Atualmente curso <strong>Pós-graduação em IA e Machine Learning</strong>, e já apliquei IA generativa no TalkClass integrando a API do Gemini para automação de dados.
+      </p>
     </div>
     <div class="about-stats">
       <div class="stat-card">
         <div class="stat-num">Back</div>
-        <div class="stat-label">Stack — front & back</div>
+        <div class="stat-label" data-pt="Stack — front & back" data-en="Stack — front & back">Stack — front & back</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">5+</div>
-        <div class="stat-label">Tecnologias principais</div>
+        <div class="stat-label" data-pt="Tecnologias principais" data-en="Core technologies">Tecnologias principais</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">IA</div>
-        <div class="stat-label">Pós-grad em andamento</div>
+        <div class="stat-num">AI</div>
+        <div class="stat-label" data-pt="Pós-grad em andamento" data-en="Postgrad in progress">Pós-grad em andamento</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">QA</div>
-        <div class="stat-label">Visão de qualidade</div>
+        <div class="stat-label" data-pt="Visão de qualidade" data-en="Quality mindset">Visão de qualidade</div>
       </div>
     </div>
   </div>
@@ -97,12 +108,12 @@
 
 <!-- HABILIDADES -->
 <section id="habilidades" class="skills-section">
-  <div class="section-label">02 — habilidades</div>
-  <h2>Stack técnica</h2>
+  <div class="section-label" data-pt="02 — habilidades" data-en="02 — skills">02 — habilidades</div>
+  <h2 data-pt="Stack técnica" data-en="Tech stack">Stack técnica</h2>
   <div class="skills-grid reveal">
     <div class="skill-group">
       <div class="skill-group-icon">⚙️</div>
-      <div class="skill-group-title">Backend & Linguagens</div>
+      <div class="skill-group-title" data-pt="Backend & Linguagens" data-en="Backend & Languages">Backend & Linguagens</div>
       <div class="skill-tags">
         <span class="tag">C# / .NET 8</span>
         <span class="tag">Python</span>
@@ -114,18 +125,18 @@
     </div>
     <div class="skill-group">
       <div class="skill-group-icon">🗄️</div>
-      <div class="skill-group-title">Banco de Dados</div>
+      <div class="skill-group-title" data-pt="Banco de Dados" data-en="Databases">Banco de Dados</div>
       <div class="skill-tags">
         <span class="tag">PostgreSQL</span>
         <span class="tag">MySQL</span>
         <span class="tag">SQL</span>
-        <span class="tag">Modelagem Relacional</span>
+        <span class="tag" data-pt="Modelagem Relacional" data-en="Relational Modeling">Modelagem Relacional</span>
         <span class="tag">Power BI</span>
       </div>
     </div>
     <div class="skill-group">
       <div class="skill-group-icon">🛠️</div>
-      <div class="skill-group-title">DevOps & Ferramentas</div>
+      <div class="skill-group-title" data-pt="DevOps & Ferramentas" data-en="DevOps & Tools">DevOps & Ferramentas</div>
       <div class="skill-tags">
         <span class="tag">Docker</span>
         <span class="tag">Git / GitHub</span>
@@ -137,22 +148,22 @@
     </div>
     <div class="skill-group">
       <div class="skill-group-icon">🧪</div>
-      <div class="skill-group-title">QA & Testes</div>
+      <div class="skill-group-title" data-pt="QA & Testes" data-en="QA & Testing">QA & Testes</div>
       <div class="skill-tags">
-        <span class="tag">Testes Funcionais</span>
-        <span class="tag">Testes Exploratórios</span>
+        <span class="tag" data-pt="Testes Funcionais" data-en="Functional Testing">Testes Funcionais</span>
+        <span class="tag" data-pt="Testes Exploratórios" data-en="Exploratory Testing">Testes Exploratórios</span>
         <span class="tag">Bug Tracking</span>
         <span class="tag">Scrum / Kanban</span>
       </div>
     </div>
     <div class="skill-group">
       <div class="skill-group-icon">🤖</div>
-      <div class="skill-group-title">IA & Dados</div>
+      <div class="skill-group-title" data-pt="IA & Dados" data-en="AI & Data">IA & Dados</div>
       <div class="skill-tags">
         <span class="tag">Gemini API</span>
         <span class="tag">Machine Learning</span>
-        <span class="tag">Análise de Dados</span>
-        <span class="tag">Automação</span>
+        <span class="tag" data-pt="Análise de Dados" data-en="Data Analysis">Análise de Dados</span>
+        <span class="tag" data-pt="Automação" data-en="Automation">Automação</span>
       </div>
     </div>
     <div class="skill-group">
@@ -163,8 +174,8 @@
         <span class="tag">TypeScript</span>
         <span class="tag">JavaScript</span>
         <span class="tag">HTML5 / CSS3</span>
-        <span class="tag">Responsividade</span>
-        <span class="tag" style="opacity:0.6; border-style:dashed;">Next.js ↗ estudando</span>
+        <span class="tag" data-pt="Responsividade" data-en="Responsive Design">Responsividade</span>
+        <span class="tag" style="opacity:0.6; border-style:dashed;" data-pt="Next.js ↗ estudando" data-en="Next.js ↗ learning">Next.js ↗ estudando</span>
       </div>
     </div>
   </div>
@@ -172,14 +183,14 @@
 
 <!-- PROJETOS -->
 <section id="projetos">
-  <div class="section-label">03 — projetos</div>
-  <h2>O que eu construí</h2>
+  <div class="section-label" data-pt="03 — projetos" data-en="03 — projects">03 — projetos</div>
+  <h2 data-pt="O que eu construí" data-en="What I built">O que eu construí</h2>
   <div class="projects-grid reveal">
     <div class="project-card featured">
       <div>
-        <div class="project-badge">✦ Projeto Destaque</div>
+        <div class="project-badge" data-pt="✦ Projeto Destaque" data-en="✦ Featured Project">✦ Projeto Destaque</div>
         <h3 class="project-title">TalkClass</h3>
-        <p class="project-desc">
+        <p class="project-desc" data-pt="Sistema web completo para feedback e automação de dados educacionais. Integra IA generativa via Gemini para análise de dados e extração de insights para gestores, com arquitetura de microserviços." data-en="Full-stack web system for educational feedback and data automation. Integrates generative AI via Gemini for data analysis and insight extraction for managers, built with microservices architecture.">
           Sistema web completo para feedback e automação de dados educacionais. 
           Integra IA generativa via Gemini para análise de dados e extração de insights 
           para gestores, com arquitetura de microserviços.
@@ -196,23 +207,22 @@
           <span class="stack-tag">Gemini AI</span>
         </div>
         <div style="margin-bottom:1.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=LVNUECQpb7Q&list=PLja-ehNO5bSwx17jzMHosGecKfyqykFUa&pp=sAgC" target="_blank" class="btn btn-primary">
+          <a href="https://www.youtube.com/watch?v=LVNUECQpb7Q&list=PLja-ehNO5bSwx17jzMHosGecKfyqykFUa&pp=sAgC" target="_blank" class="btn btn-primary" data-pt="Ver demo" data-en="Watch demo">
             Ver demo
           </a>
-
-          <a href="https://github.com/Adanlyn/talkclass-publico" target="_blank" class="btn btn-ghost">
+          <a href="https://github.com/Adanlyn/talkclass-publico" target="_blank" class="btn btn-ghost" data-pt="Ver código no GitHub" data-en="View code on GitHub">
             Ver código no GitHub
           </a>
         </div>
       </div>
       <ul class="project-highlights">
-        <li>Construção de API REST em ASP.NET Core organizada em camadas</li>
-        <li>Implementação de autenticação com JWT</li>
-        <li>Persistência de dados com PostgreSQL e Entity Framework</li>
-        <li>Frontend em React + TypeScript integrado ao backend</li>
-        <li>Uso de Docker para padronizar o ambiente da aplicação</li>
-        <li>Dashboards dinâmicos em React/TypeScript para visualização de métricas</li>
-        <li>Arquitetura de microserviços com separação clara de responsabilidades</li>
+        <li data-pt="Construção de API REST em ASP.NET Core organizada em camadas" data-en="REST API built with ASP.NET Core organized in layers">Construção de API REST em ASP.NET Core organizada em camadas</li>
+        <li data-pt="Implementação de autenticação com JWT" data-en="Authentication implemented with JWT">Implementação de autenticação com JWT</li>
+        <li data-pt="Persistência de dados com PostgreSQL e Entity Framework" data-en="Data persistence with PostgreSQL and Entity Framework">Persistência de dados com PostgreSQL e Entity Framework</li>
+        <li data-pt="Frontend em React + TypeScript integrado ao backend" data-en="Frontend in React + TypeScript integrated with the backend">Frontend em React + TypeScript integrado ao backend</li>
+        <li data-pt="Uso de Docker para padronizar o ambiente da aplicação" data-en="Docker used to standardize the application environment">Uso de Docker para padronizar o ambiente da aplicação</li>
+        <li data-pt="Dashboards dinâmicos em React/TypeScript para visualização de métricas" data-en="Dynamic dashboards in React/TypeScript for metrics visualization">Dashboards dinâmicos em React/TypeScript para visualização de métricas</li>
+        <li data-pt="Arquitetura de microserviços com separação clara de responsabilidades" data-en="Microservices architecture with clear separation of responsibilities">Arquitetura de microserviços com separação clara de responsabilidades</li>
       </ul>
     </div>
   </div>
@@ -220,17 +230,17 @@
 
 <!-- EXPERIÊNCIA -->
 <section id="experiencia" class="exp-section">
-  <div class="section-label">04 — experiência</div>
-  <h2>Trajetória profissional</h2>
+  <div class="section-label" data-pt="04 — experiência" data-en="04 — experience">04 — experiência</div>
+  <h2 data-pt="Trajetória profissional" data-en="Work experience">Trajetória profissional</h2>
   <div class="exp-timeline reveal">
     <div class="exp-item">
-      <div class="exp-date">MAR 2025 — ATUAL</div>
+      <div class="exp-date" data-pt="MAR 2025 — ATUAL" data-en="MAR 2025 — PRESENT">MAR 2025 — ATUAL</div>
       <div class="exp-role">Software Tester</div>
       <div class="exp-company">MYRH Tecnologia Ltda · Home Office</div>
       <ul class="exp-list">
-        <li>Execução de testes funcionais e exploratórios em sistemas web com 100% de conformidade com as regras de negócio</li>
-        <li>Identificação e registro de bugs críticos, colaborando com o time de desenvolvimento para otimizar fluxos de correção</li>
-        <li>Atuação proativa na melhoria contínua de processos de QA em ambiente Scrum/Kanban</li>
+        <li data-pt="Execução de testes funcionais e exploratórios em sistemas web com 100% de conformidade com as regras de negócio" data-en="Execution of functional and exploratory tests on web systems with 100% compliance with business rules">Execução de testes funcionais e exploratórios em sistemas web com 100% de conformidade com as regras de negócio</li>
+        <li data-pt="Identificação e registro de bugs críticos, colaborando com o time de desenvolvimento para otimizar fluxos de correção" data-en="Identification and logging of critical bugs, collaborating with the dev team to optimize fix workflows">Identificação e registro de bugs críticos, colaborando com o time de desenvolvimento para otimizar fluxos de correção</li>
+        <li data-pt="Atuação proativa na melhoria contínua de processos de QA em ambiente Scrum/Kanban" data-en="Proactive involvement in continuous improvement of QA processes in a Scrum/Kanban environment">Atuação proativa na melhoria contínua de processos de QA em ambiente Scrum/Kanban</li>
       </ul>
     </div>
   </div>
@@ -238,22 +248,22 @@
 
 <!-- FORMAÇÃO -->
 <section id="formacao">
-  <div class="section-label">05 — formação</div>
-  <h2>Educação</h2>
+  <div class="section-label" data-pt="05 — formação" data-en="05 — education">05 — formação</div>
+  <h2 data-pt="Educação" data-en="Education">Educação</h2>
   <div class="edu-grid reveal">
     <div class="edu-card">
       <div class="edu-year">2025 → 2026</div>
-      <div class="edu-degree">Pós-graduação em Inteligência Artificial e Machine Learning</div>
+      <div class="edu-degree" data-pt="Pós-graduação em Inteligência Artificial e Machine Learning" data-en="Postgraduate in Artificial Intelligence and Machine Learning">Pós-graduação em Inteligência Artificial e Machine Learning</div>
       <div class="edu-institution">Universidade Tuiuti do Paraná</div>
     </div>
     <div class="edu-card">
       <div class="edu-year">2023 → 2025</div>
-      <div class="edu-degree">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+      <div class="edu-degree" data-pt="Tecnólogo em Análise e Desenvolvimento de Sistemas" data-en="Associate Degree in Systems Analysis and Development">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
       <div class="edu-institution">Universidade Tuiuti do Paraná</div>
     </div>
     <div class="edu-card">
       <div class="edu-year">2019 → 2022</div>
-      <div class="edu-degree">Técnico Integrado em Informática</div>
+      <div class="edu-degree" data-pt="Técnico Integrado em Informática" data-en="Integrated Technical Degree in Computer Science">Técnico Integrado em Informática</div>
       <div class="edu-institution">IFPR — Instituto Federal do Paraná</div>
     </div>
   </div>
@@ -261,11 +271,11 @@
 
 <!-- IA -->
 <section id="ia" style="background: var(--bg2);">
-  <div class="section-label">06 — inteligência artificial</div>
-  <h2>IA na prática</h2>
+  <div class="section-label" data-pt="06 — inteligência artificial" data-en="06 — artificial intelligence">06 — inteligência artificial</div>
+  <h2 data-pt="IA na prática" data-en="AI in practice">IA na prática</h2>
   <div class="reveal" style="max-width:700px; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:2rem; border-left: 3px solid var(--accent2);">
-    <div style="font-family:var(--mono); font-size:0.7rem; color:var(--accent2); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem;">🤖 Pós-grad em IA & ML em andamento · Gemini API aplicada</div>
-    <p style="color:var(--muted); font-size:0.95rem; line-height:1.8;">
+    <div style="font-family:var(--mono); font-size:0.7rem; color:var(--accent2); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem;" data-pt="🤖 Pós-grad em IA & ML em andamento · Gemini API aplicada" data-en="🤖 AI & ML Postgrad in progress · Gemini API applied">🤖 Pós-grad em IA & ML em andamento · Gemini API aplicada</div>
+    <p style="color:var(--muted); font-size:0.95rem; line-height:1.8;" data-pt="No TalkClass desenvolvi um microserviço em <strong style='color:var(--text)'>Python + FastAPI</strong> integrado à <strong style='color:var(--text)'>API do Gemini</strong> para analisar feedbacks automaticamente e gerar insights para gestores. Foi meu primeiro contato prático com IA generativa — e não vai ser o último." data-en="In TalkClass I built a microservice in <strong style='color:var(--text)'>Python + FastAPI</strong> integrated with the <strong style='color:var(--text)'>Gemini API</strong> to automatically analyze feedback and generate insights for managers. It was my first hands-on experience with generative AI — and it won't be the last.">
       No TalkClass desenvolvi um microserviço em <strong style="color:var(--text)">Python + FastAPI</strong> integrado à <strong style="color:var(--text)">API do Gemini</strong> para analisar feedbacks automaticamente e gerar insights para gestores. Foi meu primeiro contato prático com IA generativa — e não vai ser o último.
     </p>
   </div>
@@ -274,14 +284,14 @@
 <!-- CONTATO -->
 <section id="contato" class="contact-section">
   <div class="contact-inner">
-    <div class="section-label">07 — contato</div>
-    <h2>Vamos conversar?</h2>
-    <p style="color:var(--muted); font-size:1rem; margin-bottom:0.5rem;">
+    <div class="section-label" data-pt="07 — contato" data-en="07 — contact">07 — contato</div>
+    <h2 data-pt="Vamos conversar?" data-en="Let's talk?">Vamos conversar?</h2>
+    <p style="color:var(--muted); font-size:1rem; margin-bottom:0.5rem;" data-pt="Estou aberta a novas oportunidades, projetos e colaborações. Me chama!" data-en="I'm open to new opportunities, projects and collaborations. Reach out!">
       Estou aberta a novas oportunidades, projetos e colaborações. Me chama!
     </p>
     <div class="contact-links reveal">
       <a href="mailto:sollianyadanlyn@gmail.com" class="contact-link">
-        <div class="contact-link-icon">✉️</div>
+        <div class="contact-link-icon"><img src="assets/images/gmail.png" alt="Gmail"></div>
         <div class="contact-link-info">
           <div class="contact-link-label">E-mail</div>
           <div class="contact-link-val">sollianyadanlyn@gmail.com</div>
@@ -289,15 +299,15 @@
         <div class="contact-link-arrow">→</div>
       </a>
       <a href="https://wa.me/5541984495411" target="_blank" class="contact-link">
-        <div class="contact-link-icon">📱</div>
+        <div class="contact-link-icon"><img src="assets/images/whatsapp.png" alt="WhatsApp"></div>
         <div class="contact-link-info">
-          <div class="contact-link-label">Telefone / WhatsApp</div>
+          <div class="contact-link-label" data-pt="Telefone / WhatsApp" data-en="Phone / WhatsApp">Telefone / WhatsApp</div>
           <div class="contact-link-val">(41) 9 8449-5411</div>
         </div>
         <div class="contact-link-arrow">→</div>
       </a>
       <a href="https://linkedin.com/in/adanlyn-silva" target="_blank" class="contact-link">
-        <div class="contact-link-icon">💼</div>
+        <div class="contact-link-icon"><img src="assets/images/linkedin.png" alt="LinkedIn"></div>
         <div class="contact-link-info">
           <div class="contact-link-label">LinkedIn</div>
           <div class="contact-link-val">linkedin.com/in/adanlyn-silva</div>
@@ -305,7 +315,7 @@
         <div class="contact-link-arrow">→</div>
       </a>
       <a href="https://github.com/Adanlyn" target="_blank" class="contact-link">
-        <div class="contact-link-icon">🐙</div>
+        <div class="contact-link-icon"><img src="assets/images/github.png" alt="GitHub"></div>
         <div class="contact-link-info">
           <div class="contact-link-label">GitHub</div>
           <div class="contact-link-val">github.com/Adanlyn</div>
@@ -318,8 +328,8 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 <span>Adanlyn Silva</span>. Feito com código e café ☕</p>
-  <p>Fullstack Dev · Curitiba, PR</p>
+  <p>© 2026 <span>Adanlyn Silva</span>. <span data-pt="Feito com código e café ☕" data-en="Made with code and coffee ☕">Feito com código e café ☕</span></p>
+  <p data-pt="Fullstack Dev · Curitiba, PR" data-en="Fullstack Dev · Curitiba, Brazil">Fullstack Dev · Curitiba, PR</p>
 </footer>
 
 <script src="js/main.js"></script>

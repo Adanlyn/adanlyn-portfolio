@@ -716,3 +716,39 @@
     .project-card.featured { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 0.5rem; padding: 1.5rem; }
   }
+  /* LANG TOGGLE */
+  .lang-toggle {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: border-color 0.2s;
+  }
+
+  .lang-toggle:hover { border-color: var(--accent); }
+
+  .lang-flag {
+    width: 24px;
+    height: 18px;
+    object-fit: cover;
+    border-radius: 3px;
+    opacity: 0.35;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .lang-flag.active {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  /* CONTACT ICONS */
+  .contact-link-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    border-radius: 6px;
+  }
